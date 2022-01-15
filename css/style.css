@@ -173,27 +173,81 @@ ul,ol{
 }
 
 /* footer part css  */
-.footer-main {
+.footer {
     background-color: #0A0826;
+    max-width: 100%;
+    padding: 30px;
+}
+.footer-title, .footer-description {
+    color: white;
     text-align: center;
-    padding: 50px 0px;
 }
-.footer-main h2 {
-    color: #fff;
+.footer-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+.footer-icon {
+    display: flex;
+    justify-content: center;
     font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
 }
-.footer-main p {
-    color: #fff;
-    font-size: 14px;
-}
-.footer-icons i {
+
+.footer-icon i {
     margin-top: 20px;
     margin-right: 15px;
     color: #fff;
     background-color: rgba(190, 75, 75, 0.342);
     border-radius: 50%;
     border: 10px solid rgba(190, 75, 75, 0.342);
-    cursor: pointer;
+}
+/* media query  */
+/* for mobile devices  */
+@media(max-width:688px) {
+    .header-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .header-banner{
+        flex-direction: column;
+    }
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .collection-items {
+        margin: 0 auto;
+
+    }
+    .another-page {
+        width: 70%;
+    }
+    .contact-form {
+        width: 80%;
+    }
+    .footer {
+        width: 100%;
+    }
+}
+/* for tablet  */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .header-container {
+        width: 100%;
+        margin-left: 30px;
+    }
+    .banner-main {
+        margin-left: 30px;
+    }
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 30px;
+    }
 }
